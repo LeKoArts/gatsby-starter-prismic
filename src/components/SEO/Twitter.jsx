@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import Helmet from 'react-helmet';
+import PropTypes from 'prop-types'
+import React from 'react'
+import Helmet from 'react-helmet'
 
 const Twitter = ({ type, username, title, desc, image }) => (
   <Helmet>
@@ -10,9 +10,9 @@ const Twitter = ({ type, username, title, desc, image }) => (
     {desc && <meta name="twitter:description" content={desc} />}
     {image && <meta name="twitter:image" content={image} />}
   </Helmet>
-);
+)
 
-export default Twitter;
+export default Twitter
 
 Twitter.propTypes = {
   type: PropTypes.string,
@@ -20,7 +20,7 @@ Twitter.propTypes = {
   title: PropTypes.string,
   desc: PropTypes.string,
   image: PropTypes.string,
-};
+}
 
 Twitter.defaultProps = {
   type: 'summary_large_image',
@@ -28,4 +28,4 @@ Twitter.defaultProps = {
   title: null,
   desc: null,
   image: null,
-};
+}

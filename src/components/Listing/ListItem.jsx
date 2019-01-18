@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styled from '@emotion/styled/macro';
-import { Link } from 'gatsby';
-import { Categories } from 'components/Listing';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styled from '@emotion/styled/macro'
+import { Link } from 'gatsby'
+import Categories from './Categories'
 
 const Item = styled.li`
   margin-bottom: 1.45rem;
-`;
+`
 
 const Headline = styled.p`
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
@@ -18,7 +18,7 @@ const Headline = styled.p`
     font-style: normal;
     font-weight: normal;
   }
-`;
+`
 
 const StyledLink = styled(Link)`
   font-size: 2.369rem;
@@ -27,11 +27,11 @@ const StyledLink = styled(Link)`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     font-size: 1.777rem;
   }
-`;
+`
 
 export default class ListItem extends Component {
   render() {
-    const { node, categories } = this.props;
+    const { node, categories } = this.props
     return (
       <Item>
         <Headline>
@@ -39,11 +39,11 @@ export default class ListItem extends Component {
         </Headline>
         <StyledLink to={node.uid}>{node.data.title.text}</StyledLink>
       </Item>
-    );
+    )
   }
 }
 
 ListItem.propTypes = {
   node: PropTypes.object.isRequired,
   categories: PropTypes.array.isRequired,
-};
+}

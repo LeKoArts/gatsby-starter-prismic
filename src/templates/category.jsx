@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import styled from '@emotion/styled/macro';
-import { Layout, Listing, Wrapper, Title, SEO, Header } from 'components';
-import website from '../../config/website';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import styled from '@emotion/styled/macro'
+import { Layout, Listing, Wrapper, Title, SEO, Header } from '../components'
+import website from '../../config/website'
 
 const Hero = styled.section`
   background-color: ${props => props.theme.colors.primary};
@@ -12,7 +12,7 @@ const Hero = styled.section`
   h1 {
     color: ${props => props.theme.colors.bg};
   }
-`;
+`
 
 const Headline = styled.p`
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
@@ -23,7 +23,7 @@ const Headline = styled.p`
     font-style: normal;
     font-weight: normal;
   }
-`;
+`
 
 const Category = ({
   pageContext: { category },
@@ -48,9 +48,9 @@ const Category = ({
       <Listing posts={edges} />
     </Wrapper>
   </Layout>
-);
+)
 
-export default Category;
+export default Category
 
 Category.propTypes = {
   pageContext: PropTypes.shape({
@@ -63,7 +63,7 @@ Category.propTypes = {
     }).isRequired,
   }).isRequired,
   location: PropTypes.object.isRequired,
-};
+}
 
 export const pageQuery = graphql`
   query CategoryPage($category: String!) {
@@ -98,4 +98,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

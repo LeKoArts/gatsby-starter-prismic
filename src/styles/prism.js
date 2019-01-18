@@ -1,4 +1,4 @@
-import css from '@emotion/css/macro';
+import css from '@emotion/css/macro'
 
 const prism = css`
   code[class*='language-'],
@@ -157,6 +157,6 @@ const prism = css`
   .line-numbers-rows > span:before {
     color: #979db4;
   }
-`;
+`
 
-export default prism;
+export default prism

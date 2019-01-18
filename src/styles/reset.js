@@ -1,4 +1,4 @@
-import css from '@emotion/css/macro';
+import css from '@emotion/css/macro'
 
 const reset = css`
   *,
@@ -105,6 +105,6 @@ const reset = css`
   [hidden] {
     display: none !important;
   }
-`;
+`
 
-export default reset;
+export default reset

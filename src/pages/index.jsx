@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styled from '@emotion/styled/macro';
-import { graphql } from 'gatsby';
-import { Layout, Listing, Wrapper, Title } from 'components';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styled from '@emotion/styled/macro'
+import { graphql } from 'gatsby'
+import { Layout, Listing, Wrapper, Title } from '../components'
 
 const Hero = styled.header`
   background-color: ${props => props.theme.colors.greyLight};
   display: flex;
   align-items: center;
-`;
+`
 
 const HeroInner = styled(Wrapper)`
   padding-top: 13rem;
@@ -28,7 +28,7 @@ const HeroInner = styled(Wrapper)`
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
-`;
+`
 
 const HeroText = styled.div`
   font-size: 1.7rem;
@@ -40,7 +40,7 @@ const HeroText = styled.div`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     font-size: 1.25rem;
   }
-`;
+`
 
 const Social = styled.ul`
   list-style-type: none;
@@ -72,7 +72,7 @@ const Social = styled.ul`
       }
     }
   }
-`;
+`
 
 const ProjectListing = styled.ul`
   list-style-type: none;
@@ -89,13 +89,13 @@ const ProjectListing = styled.ul`
       }
     }
   }
-`;
+`
 
 class Index extends Component {
   render() {
     const {
       data: { homepage, social, posts, projects },
-    } = this.props;
+    } = this.props
     return (
       <Layout>
         <Hero>
@@ -124,17 +124,17 @@ class Index extends Component {
           </ProjectListing>
         </Wrapper>
       </Layout>
-    );
+    )
   }
 }
 
-export default Index;
+export default Index
 
 Index.propTypes = {
   data: PropTypes.shape({
     posts: PropTypes.object.isRequired,
   }).isRequired,
-};
+}
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -199,4 +199,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

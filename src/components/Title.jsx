@@ -1,4 +1,4 @@
-import styled from '@emotion/styled/macro';
+import styled from '@emotion/styled/macro'
 
 const Title = styled.p`
   font-style: italic;
@@ -26,6 +26,6 @@ const Title = styled.p`
       left: -35px;
     }
   }
-`;
+`
 
-export default Title;
+export default Title

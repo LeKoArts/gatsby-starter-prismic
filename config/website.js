@@ -15,4 +15,4 @@ module.exports = {
   backgroundColor: '#EBEDF2',
 
   twitter: '@starter_prismicio', // Twitter Username
-};
+}
