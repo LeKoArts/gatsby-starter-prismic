@@ -6,11 +6,11 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { Global, css } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
-import { SkipNavLink } from '@reach/skip-nav'
 import '@reach/skip-nav/styles.css'
 
 import Footer from './Footer'
 import SEO from './SEO'
+import SkipNavLink from './SkipNavLink'
 import { theme, reset } from '../styles'
 
 import 'typeface-lora'
