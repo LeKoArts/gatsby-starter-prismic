@@ -4,28 +4,20 @@ import Helmet from 'react-helmet'
 
 const Facebook = ({ url, type, title, desc, image }) => (
   <Helmet>
-    {url && <meta property="og:url" content={url} />}
-    {type && <meta property="og:type" content={type} />}
-    {title && <meta property="og:title" content={title} />}
-    {desc && <meta property="og:description" content={desc} />}
-    {image && <meta property="og:image" content={image} />}
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={image} />
   </Helmet>
 )
 
 export default Facebook
 
 Facebook.propTypes = {
-  url: PropTypes.string,
-  type: PropTypes.string,
-  title: PropTypes.string,
-  desc: PropTypes.string,
-  image: PropTypes.string,
-}
-
-Facebook.defaultProps = {
-  url: null,
-  type: null,
-  title: null,
-  desc: null,
-  image: null,
+  url: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 }
