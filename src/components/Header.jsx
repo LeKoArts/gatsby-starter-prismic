@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
-const StyledHeader = styled.header`
+const StyledHeader = styled.nav`
   padding-bottom: 2rem;
   a {
     color: ${props => (props.invert ? props.theme.colors.greyLight : props.theme.colors.greyDark)};
@@ -19,7 +19,9 @@ class Header extends Component {
     const { invert } = this.props
     return (
       <StyledHeader invert={invert}>
-        <Link to="/">Frontend Developer</Link>
+        <Link to="/" aria-label="Back to Home">
+          Frontend Developer
+        </Link>
       </StyledHeader>
     )
   }

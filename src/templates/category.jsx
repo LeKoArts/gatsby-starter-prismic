@@ -25,6 +25,8 @@ const Headline = styled.p`
   }
 `
 
+const CatWrapper = Wrapper.withComponent('main')
+
 const Category = ({
   pageContext: { category },
   data: {
@@ -41,12 +43,12 @@ const Category = ({
         <h1>{category}</h1>
       </Wrapper>
     </Hero>
-    <Wrapper>
+    <CatWrapper id={website.skipNavId}>
       <Title style={{ marginTop: '4rem' }}>
         {totalCount} {totalCount === 1 ? 'Post' : 'Posts'} {totalCount === 1 ? 'was' : 'were'} tagged with "{category}"
       </Title>
       <Listing posts={edges} />
-    </Wrapper>
+    </CatWrapper>
   </Layout>
 )
 

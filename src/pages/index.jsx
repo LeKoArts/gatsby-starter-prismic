@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import { Layout, Listing, Wrapper, Title } from '../components'
+import website from '../../config/website'
 
 const Hero = styled.header`
   background-color: ${props => props.theme.colors.greyLight};
@@ -91,6 +92,8 @@ const ProjectListing = styled.ul`
   }
 `
 
+const IndexWrapper = Wrapper.withComponent('main')
+
 class Index extends Component {
   render() {
     const {
@@ -111,7 +114,7 @@ class Index extends Component {
             </Social>
           </HeroInner>
         </Hero>
-        <Wrapper style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <IndexWrapper id={website.skipNavId} style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
           <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
           <Listing posts={posts.edges} />
           <Title style={{ marginTop: '8rem' }}>Recent projects</Title>
@@ -122,7 +125,7 @@ class Index extends Component {
               </li>
             ))}
           </ProjectListing>
-        </Wrapper>
+        </IndexWrapper>
       </Layout>
     )
   }

@@ -6,7 +6,7 @@ import { Layout, Listing, Wrapper, SliceZone, Title, SEO, Header } from '../comp
 import Categories from '../components/Listing/Categories'
 import website from '../../config/website'
 
-const Hero = styled.section`
+const Hero = styled.header`
   background-color: ${props => props.theme.colors.greyLight};
   padding-top: 1rem;
   padding-bottom: 4rem;
@@ -23,6 +23,8 @@ const Headline = styled.p`
   }
 `
 
+const PostWrapper = Wrapper.withComponent('main')
+
 const Post = ({ data: { prismicPost, posts }, location }) => {
   const { data } = prismicPost
   let categories = false
@@ -31,7 +33,13 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
   }
   return (
     <Layout customSEO>
-      <SEO title={`${data.title.text} | ${website.titleAlt}`} pathname={location.pathname} desc={data.description} node={prismicPost} article />
+      <SEO
+        title={`${data.title.text} | ${website.titleAlt}`}
+        pathname={location.pathname}
+        desc={data.description}
+        node={prismicPost}
+        article
+      />
       <Hero>
         <Wrapper>
           <Header />
@@ -41,11 +49,11 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
           <h1>{data.title.text}</h1>
         </Wrapper>
       </Hero>
-      <Wrapper>
+      <PostWrapper id={website.skipNavId}>
         <SliceZone allSlices={data.body} />
         <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
         <Listing posts={posts.edges} />
-      </Wrapper>
+      </PostWrapper>
     </Layout>
   )
 }

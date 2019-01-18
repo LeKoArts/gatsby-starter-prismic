@@ -6,6 +6,8 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { Global, css } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
+import { SkipNavLink } from '@reach/skip-nav'
+import '@reach/skip-nav/styles.css'
 
 import Footer from './Footer'
 import SEO from './SEO'
@@ -73,6 +75,7 @@ const PureLayout = ({ children, data, customSEO }) => (
   <ThemeProvider theme={theme}>
     <>
       <Global styles={globalStyle} />
+      <SkipNavLink />
       {!customSEO && <SEO />}
       {children}
       <Footer>
