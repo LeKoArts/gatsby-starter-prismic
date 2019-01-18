@@ -30,8 +30,8 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
     categories = data.categories.map(c => c.category.document[0].data.name)
   }
   return (
-    <Layout>
-      <SEO title={`${data.title.text} | ${website._title}`} pathname={location.pathname} article />
+    <Layout customSEO>
+      <SEO title={`${data.title.text} | ${website.titleAlt}`} pathname={location.pathname} desc={data.description} node={prismicPost} article />
       <Hero>
         <Wrapper>
           <Header />
@@ -66,10 +66,13 @@ export const pageQuery = graphql`
   query PostBySlug($uid: String!) {
     prismicPost(uid: { eq: $uid }) {
       uid
+      first_publication_date
+      last_publication_date
       data {
         title {
           text
         }
+        description
         date(formatString: "DD.MM.YYYY")
         categories {
           category {

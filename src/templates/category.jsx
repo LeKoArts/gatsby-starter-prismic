@@ -33,7 +33,7 @@ const Category = ({
   location,
 }) => (
   <Layout>
-    <SEO title={`${category} | ${website._title}`} pathname={location.pathname} />
+    <SEO title={`Category: ${category} | ${website.titleAlt}`} pathname={location.pathname} />
     <Hero>
       <Wrapper>
         <Header invert />

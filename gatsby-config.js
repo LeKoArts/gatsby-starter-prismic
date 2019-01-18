@@ -4,38 +4,26 @@ require('dotenv').config({
 
 const prismicHtmlSerializer = require('./src/gatsby/htmlSerializer')
 
-const {
-  _pathPrefix,
-  shortName,
-  description,
-  themeColor,
-  backgroundColor,
-  _title,
-  _titleAlt,
-  _url,
-  author,
-  logo,
-  favicon,
-  siteLanguage,
-  twitter,
-} = require('./config/website')
+const website = require('./config/website')
+
+const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
 
 module.exports = {
   /* General Information */
-  pathPrefix: _pathPrefix,
+  pathPrefix: website.pathPrefix,
   siteMetadata: {
-    title: _title,
-    titleAlt: _titleAlt,
-    shortName,
-    author,
-    siteLanguage,
-    logo, // Logo for JSONLD
-    url: _url,
-    siteUrl: _url + _pathPrefix, // For gatsby-plugin-sitemap
-    pathPrefix: _pathPrefix,
-    description,
-    banner: logo,
-    twitter,
+    siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
+    pathPrefix,
+    title: website.title,
+    titleAlt: website.titleAlt,
+    description: website.description,
+    banner: website.logo,
+    headline: website.headline,
+    siteLanguage: website.siteLanguage,
+    ogLanguage: website.ogLanguage,
+    author: website.author,
+    twitter: website.twitter,
+    facebook: website.facebook,
   },
   /* Plugins */
   plugins: [
@@ -65,14 +53,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: _title,
-        short_name: _titleAlt,
-        description,
-        start_url: _pathPrefix,
-        background_color: backgroundColor,
-        theme_color: themeColor,
+        name: website.title,
+        short_name: website.titleAlt,
+        description: website.description,
+        start_url: pathPrefix,
+        background_color: website.backgroundColor,
+        theme_color: website.themeColor,
         display: 'standalone',
-        icon: favicon,
+        icon: website.favicon,
       },
     },
     // Must be placed at the end

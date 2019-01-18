@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-sitemap: https://gatsby-starter-prismic.netlify.com/sitemap.xml
+sitemap: https://prismic.lekoarts.de/sitemap.xml

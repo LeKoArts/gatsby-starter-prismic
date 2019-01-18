@@ -9,7 +9,7 @@ import Twitter from './Twitter'
 
 export default class SEO extends Component {
   render() {
-    const { title, desc, banner, pathname, article } = this.props
+    const { title, desc, banner, pathname, article, node } = this.props
     return (
       <StaticQuery
         query={query}
@@ -17,76 +17,134 @@ export default class SEO extends Component {
           site: {
             buildTime,
             siteMetadata: {
-              defaultTitle,
-              titleAlt,
-              shortName,
-              author,
-              siteLanguage,
-              logo,
               siteUrl,
-              pathPrefix,
+              defaultTitle,
               defaultDescription,
               defaultBanner,
+              headline,
+              siteLanguage,
+              ogLanguage,
+              author,
               twitter,
+              facebook,
             },
           },
         }) => {
           const seo = {
             title: title || defaultTitle,
-            description: defaultDescription || desc,
+            description: desc || defaultDescription,
             image: `${siteUrl}${banner || defaultBanner}`,
-            url: `${siteUrl}${pathname || '/'}`,
+            url: `${siteUrl}${pathname || ''}`,
           }
 
-          const realPrefix = pathPrefix === '/' ? '' : pathPrefix
+          // schema.org in JSONLD format
+          // https://developers.google.com/search/docs/guides/intro-structured-data
+          // You can fill out the 'author', 'creator' with more data or another type (e.g. 'Organization')
 
-          let schemaOrgJSONLD = [
+          const schemaOrgWebPage = {
+            '@context': 'http://schema.org',
+            '@type': 'WebPage',
+            url: siteUrl,
+            headline,
+            inLanguage: siteLanguage,
+            mainEntityOfPage: siteUrl,
+            description: defaultDescription,
+            name: defaultTitle,
+            author: {
+              '@type': 'Person',
+              name: author,
+            },
+            copyrightHolder: {
+              '@type': 'Person',
+              name: author,
+            },
+            copyrightYear: '2019',
+            creator: {
+              '@type': 'Person',
+              name: author,
+            },
+            publisher: {
+              '@type': 'Person',
+              name: author,
+            },
+            datePublished: '2019-01-18T10:30:00+01:00',
+            dateModified: buildTime,
+            image: {
+              '@type': 'ImageObject',
+              url: `${siteUrl}${defaultBanner}`,
+            },
+          }
+
+          // Initial breadcrumb list
+
+          const itemListElement = [
             {
-              '@context': 'http://schema.org',
-              '@type': 'WebSite',
-              '@id': siteUrl,
-              url: siteUrl,
-              name: defaultTitle,
-              alternateName: titleAlt || '',
+              '@type': 'ListItem',
+              item: {
+                '@id': siteUrl,
+                name: 'Homepage',
+              },
+              position: 1,
             },
           ]
 
+          let schemaArticle = null
+
           if (article) {
-            schemaOrgJSONLD = [
-              {
-                '@context': 'http://schema.org',
-                '@type': 'BlogPosting',
-                '@id': seo.url,
-                url: seo.url,
-                name: title,
-                alternateName: titleAlt || '',
-                headline: title,
-                image: {
+            schemaArticle = {
+              '@context': 'http://schema.org',
+              '@type': 'Article',
+              author: {
+                '@type': 'Person',
+                name: author,
+              },
+              copyrightHolder: {
+                '@type': 'Person',
+                name: author,
+              },
+              copyrightYear: '2019',
+              creator: {
+                '@type': 'Person',
+                name: author,
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: author,
+                logo: {
                   '@type': 'ImageObject',
-                  url: seo.image,
-                },
-                description: seo.description,
-                datePublished: buildTime,
-                dateModified: buildTime,
-                author: {
-                  '@type': 'Person',
-                  name: author,
-                },
-                publisher: {
-                  '@type': 'Organization',
-                  name: author,
-                  logo: {
-                    '@type': 'ImageObject',
-                    url: siteUrl + realPrefix + logo,
-                  },
-                },
-                isPartOf: siteUrl,
-                mainEntityOfPage: {
-                  '@type': 'WebSite',
-                  '@id': siteUrl,
+                  url: `${siteUrl}${defaultBanner}`,
                 },
               },
-            ]
+              datePublished: node.first_publication_date,
+              dateModified: node.last_publication_date,
+              description: seo.description,
+              headline: seo.title,
+              inLanguage: 'en',
+              url: seo.url,
+              name: seo.title,
+              image: {
+                '@type': 'ImageObject',
+                url: seo.image,
+              },
+              mainEntityOfPage: seo.url,
+            }
+            // Push current blogpost into breadcrumb list
+            itemListElement.push({
+              '@type': 'ListItem',
+              item: {
+                '@id': seo.url,
+                name: seo.title,
+              },
+              position: 2,
+            })
+          }
+
+          const breadcrumb = {
+            '@context': 'http://schema.org',
+            '@type': 'BreadcrumbList',
+            description: 'Breadcrumbs list',
+            name: 'Breadcrumbs',
+            itemListElement,
           }
 
           return (
@@ -95,16 +153,20 @@ export default class SEO extends Component {
                 <html lang={siteLanguage} />
                 <meta name="description" content={seo.description} />
                 <meta name="image" content={seo.image} />
-                <meta name="apple-mobile-web-app-title" content={shortName} />
-                <meta name="application-name" content={shortName} />
-                <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+                <meta name="gatsby-starter" content="Gatsby Starter Prismic" />
+                {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
+                {!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
+                {article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
+                <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
               </Helmet>
               <Facebook
                 desc={seo.description}
                 image={seo.image}
                 title={seo.title}
-                type={article ? 'article' : null}
+                type={article ? 'article' : 'website'}
                 url={seo.url}
+                locale={ogLanguage}
+                name={facebook}
               />
               <Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} />
             </>
@@ -121,6 +183,7 @@ SEO.propTypes = {
   banner: PropTypes.string,
   pathname: PropTypes.string,
   article: PropTypes.bool,
+  node: PropTypes.object,
 }
 
 SEO.defaultProps = {
@@ -129,6 +192,7 @@ SEO.defaultProps = {
   banner: null,
   pathname: null,
   article: false,
+  node: null,
 }
 
 const query = graphql`
@@ -136,17 +200,16 @@ const query = graphql`
     site {
       buildTime(formatString: "YYYY-MM-DD")
       siteMetadata {
+        siteUrl
         defaultTitle: title
-        titleAlt
-        shortName
-        author
-        siteLanguage
-        logo
-        siteUrl: url
-        pathPrefix
         defaultDescription: description
         defaultBanner: banner
+        headline
+        siteLanguage
+        ogLanguage
+        author
         twitter
+        facebook
       }
     }
   }

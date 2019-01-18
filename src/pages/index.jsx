@@ -51,7 +51,7 @@ const Social = styled.ul`
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   li {
     display: inline;
-    &:not(:first-child) {
+    &:not([data-name='social-entry-0']) {
       margin-left: 2.5rem;
       @media (max-width: ${props => props.theme.breakpoints.s}) {
         margin-left: 1.75rem;
@@ -103,8 +103,8 @@ class Index extends Component {
             <h1>{homepage.data.title.text}</h1>
             <HeroText dangerouslySetInnerHTML={{ __html: homepage.data.content.html }} />
             <Social>
-              {social.edges.map(s => (
-                <li key={s.node.primary.label.text}>
+              {social.edges.map((s, index) => (
+                <li data-name={`social-entry-${index}`} key={s.node.primary.label.text}>
                   <a href={s.node.primary.link.url}>{s.node.primary.label.text}</a>
                 </li>
               ))}

@@ -69,11 +69,11 @@ const globalStyle = css`
   }
 `
 
-const PureLayout = ({ children, data }) => (
+const PureLayout = ({ children, data, customSEO }) => (
   <ThemeProvider theme={theme}>
     <>
       <Global styles={globalStyle} />
-      <SEO />
+      {!customSEO && <SEO />}
       {children}
       <Footer>
         <div dangerouslySetInnerHTML={{ __html: data.prismicHomepage.data.footer.html }} />
@@ -116,4 +116,9 @@ Layout.propTypes = {
 PureLayout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
   data: PropTypes.object.isRequired,
+  customSEO: PropTypes.bool,
+}
+
+PureLayout.defaultProps = {
+  customSEO: false,
 }
