@@ -1,4 +1,4 @@
-import css from '@emotion/css/macro'
+import { css } from '@emotion/core'
 
 const prism = css`
   code[class*='language-'],

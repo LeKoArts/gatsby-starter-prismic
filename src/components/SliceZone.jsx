@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled/macro'
+import styled from '@emotion/styled'
 import { BodyText, CodeBlock, Image, Quote } from '../slices'
 import { prism } from '../styles'
 

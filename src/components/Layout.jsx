@@ -1,9 +1,10 @@
 /* eslint no-unused-expressions: 0 */
+/* eslint react/destructuring-assignment: 0 */
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import { injectGlobal } from 'emotion/macro'
+import { Global, css } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
 
 import Footer from './Footer'
@@ -13,7 +14,7 @@ import { theme, reset } from '../styles'
 import 'typeface-lora'
 import 'typeface-source-sans-pro'
 
-injectGlobal`
+const globalStyle = css`
   ${reset}
   h1, h2, h3, h4, h5, h6 {
     color: ${theme.colors.black};
@@ -36,7 +37,8 @@ injectGlobal`
     text-decoration: none;
     font-weight: 700;
     font-style: italic;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
   }
@@ -70,6 +72,7 @@ injectGlobal`
 const PureLayout = ({ children, data }) => (
   <ThemeProvider theme={theme}>
     <>
+      <Global styles={globalStyle} />
       <SEO />
       {children}
       <Footer>
@@ -94,13 +97,21 @@ class Layout extends Component {
             }
           }
         `}
-        render={data => <PureLayout {...this.props} data={data} />}
+        render={data => (
+          <PureLayout {...this.props} data={data}>
+            {this.props.children}
+          </PureLayout>
+        )}
       />
     )
   }
 }
 
 export default Layout
+
+Layout.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
+}
 
 PureLayout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,

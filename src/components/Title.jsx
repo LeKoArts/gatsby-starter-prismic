@@ -1,4 +1,4 @@
-import styled from '@emotion/styled/macro'
+import styled from '@emotion/styled'
 
 const Title = styled.p`
   font-style: italic;

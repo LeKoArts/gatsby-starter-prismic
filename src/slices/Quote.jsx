@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled/macro'
+import styled from '@emotion/styled'
 
 const BlockQuote = styled.blockquote`
   max-width: ${props => props.theme.maxWidthText};
