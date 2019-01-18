@@ -103,14 +103,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-lodash',
-    // Although this starter doesn't use local files this plugin is necessary for the gatsby-image features of gatsby-source-prismic
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'src',
-        path: `${__dirname}/src/`,
-      },
-    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

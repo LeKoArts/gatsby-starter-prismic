@@ -2,7 +2,7 @@
 
 A typography-heavy & light-themed Gatsby Starter which uses the Headless CMS [Prismic](https://prismic.io/).
 
-[Demo Website](https://gatsby-starter-prismic.netlify.com/)
+[Demo Website](https://prismic.lekoarts.de)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-prismic)
 
@@ -47,7 +47,6 @@ Therefore the starter has following features:
 - Offline Support
 - WebApp Manifest Support
 - Typography.js
-- Absolute modules imports
 - Configurable
   - Use the `website.js` to easily change the most important information
   - Themeable with `theme.js`
@@ -174,7 +173,7 @@ Go to your documents (`https://your-name.prismic.io/documents/`) and create cont
 After that you can run the local server:
 
 ```shell
-npm run dev
+npm run develop
 ```
 
 ### Adding new features/plugins

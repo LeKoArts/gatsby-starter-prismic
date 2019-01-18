@@ -1,6 +1,9 @@
 const path = require('path');
 const _ = require('lodash');
 
+// graphql function returns a promise so we can use this little promise helper to have a nice result/error state
+const wrapper = promise => promise.then(result => ({ result, error: null })).catch(error => ({ error, result: null }))
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -59,14 +62,5 @@ exports.createPages = async ({ graphql, actions }) => {
         category,
       },
     });
-  });
-};
-
-/* Allow us to use something like: import { X } from 'directory' instead of '../../folder/directory' */
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    },
   });
 };
