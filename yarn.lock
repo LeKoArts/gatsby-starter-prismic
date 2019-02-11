@@ -754,10 +754,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/skip-nav@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@reach/skip-nav/-/skip-nav-0.1.1.tgz#25c7390f0e4c5eb1b37cef569ca6ceedec9fb149"
-  integrity sha512-y5RjNF7PMWMsQ3OQB86tLKUGuekTbAfTHIGSlZoMToa5D0XmrRTC1CBRfisrIs2JGGhWIKSa02dkGH3yEnj9WA==
+"@reach/skip-nav@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@reach/skip-nav/-/skip-nav-0.1.2.tgz#3a154d834c970577117bf6f56b3acc5492d4b8f2"
+  integrity sha512-EFj8n6OFQYbxIBG5WPIA6MErIqP8Uzj+epx0Y9YyzQxVXzvAhqz0wiO/jeM7sjnKUiBx8/FlS8xLk2v3SWB4Lg==
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
