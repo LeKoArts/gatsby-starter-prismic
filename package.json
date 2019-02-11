@@ -39,7 +39,7 @@
     "lodash": "^4.17.11",
     "prismic-reactjs": "^0.3.2",
     "prismjs": "^1.15.0",
-    "prop-types": "^15.6.2",
+    "prop-types": "^15.7.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-helmet": "^5.2.0",
