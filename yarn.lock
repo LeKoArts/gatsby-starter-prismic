@@ -4995,10 +4995,10 @@ gatsby-plugin-emotion@^4.0.3:
     "@babel/runtime" "^7.0.0"
     "@emotion/babel-preset-css-prop" "10.0.5"
 
-gatsby-plugin-google-analytics@^2.0.13:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.13.tgz#31ecf6be05815ba2047ec8cd5129f0bea9d7fd75"
-  integrity sha512-cOfQ+f3FRl0yPm5J9atj23Xp7uGILMpYuPXHpm9nh74Tgg9R8rJyaLZaHpEiA2jdnqGvfLIBsqm6Sh0x/wepGQ==
+gatsby-plugin-google-analytics@^2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.14.tgz#b6f7e84f5eb6bcacd5831fe5dd8e8a3367136678"
+  integrity sha512-sFD73d9isJQknnDAAkDidaybHJx6VIaLfy3nO3DwbFaitvZ08RimbynYOkcWAeA0zwwix2RgAvbq/9pAmtTb/A==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
@@ -5020,10 +5020,10 @@ gatsby-plugin-manifest@^2.0.17:
     bluebird "^3.5.0"
     sharp "^0.21.3"
 
-gatsby-plugin-netlify@^2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.10.tgz#34672e74ffd3fada35571e821c9c1390bebd1ce0"
-  integrity sha512-KABeYZOmqgOZDSKJWD889lhMtKzqc0hSRp32u+8vJp8bpGImw8OdVnVlW8+ybZcQzdfJTda0KKUJm8Lsg2R0LQ==
+gatsby-plugin-netlify@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.11.tgz#658b87872c8595b20dd9ab5bb54fab35eaa8e56a"
+  integrity sha512-g4/e3bXYaahsgb4YSFX0ijgeKfnatYqyPH3SDAjC8yKE8G/b8RmpT4Vmk2fgQSbiZ6lQxela9Jkki90/FkTcxw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fs-extra "^4.0.2"
@@ -5157,10 +5157,10 @@ gatsby-transformer-sharp@^2.1.13:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@^2.0.118:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.2.tgz#3233a9dc99d4c7f5a7eeadd94e9a5515b1c8b702"
-  integrity sha512-70kwwQkDwvAUTuf8nFwlHMtRF5Ut3X/PFx/L0AvOCFEHcNqAdDMPd5c6Nz8/zmeRSpY/paLS+ZYtDw/ymr6Mgw==
+gatsby@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.4.tgz#a69ee6212d37326cb93238a5cf21d3237d7a6f16"
+  integrity sha512-WWbl7DkF6FSL/HE+hMEUxPPi8vGvEieGLTvXOxvS5S1C0FF3P2GOr/TP28TVqzaEQ4sPKtlPeV7s2v1P3MW/2A==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
