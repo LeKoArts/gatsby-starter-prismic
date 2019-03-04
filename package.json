@@ -44,7 +44,7 @@
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
-    "typeface-lora": "^0.0.54",
+    "typeface-lora": "^0.0.72",
     "typeface-source-sans-pro": "^0.0.54",
     "typography": "^0.16.18"
   },
