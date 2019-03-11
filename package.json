@@ -50,10 +50,10 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.18",
+    "react-typography": "^0.16.19",
     "typeface-lora": "^0.0.72",
     "typeface-source-sans-pro": "^0.0.54",
-    "typography": "^0.16.18"
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
