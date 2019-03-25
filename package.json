@@ -22,13 +22,13 @@
     "test:e2e:ci": "cross-env CYPRESS_SUPPORT=y start-server-and-test develop http://localhost:8000 cy:run:ci"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.9",
-    "@emotion/styled": "^10.0.9",
-    "@emotion/styled-base": "^10.0.9",
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@emotion/styled-base": "^10.0.10",
     "@reach/skip-nav": "^0.1.2",
     "emotion": "^10.0.9",
     "emotion-server": "^10.0.9",
-    "emotion-theming": "^10.0.9",
+    "emotion-theming": "^10.0.10",
     "gatsby": "^2.2.9",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-emotion": "^4.0.6",
