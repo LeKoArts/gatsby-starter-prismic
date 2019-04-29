@@ -11138,10 +11138,10 @@ stackframe@^1.0.4:
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.0.4.tgz#357b24a992f9427cba6b545d96a14ed2cbca187b"
   integrity sha512-to7oADIniaYwS3MhtCa/sQhrxidCCQiF/qp4/m5iN3ipf0Y7Xlri0f6eG29r08aL7JYl8n32AF3Q5GYBZ7K8vw==
 
-start-server-and-test@^1.7.13:
-  version "1.7.13"
-  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.7.13.tgz#fbf8d149b41ba8297773bca3660e455b67ce9849"
-  integrity sha512-vAnsQvLgzDN3kVo0mwD7tzbjWkZq9OmSvoDxwc6C1I0Ivq7chCqdcyssYcBg4wp6Q4DHHQiKZUytWggKuvoWvQ==
+start-server-and-test@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.9.0.tgz#23bd9ff87dd259b5c9e51392cd6b70749ddd4b0a"
+  integrity sha512-aXOP5zL1CZnBX/N7ssnqQvYzoXMaG1H4rcGSZjqdi6Jth61xYUe+S/DQlE8PKFLoXnafceA61kdrv8xjG6mqyA==
   dependencies:
     bluebird "3.5.4"
     check-more-types "2.24.0"
