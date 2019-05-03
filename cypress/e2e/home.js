@@ -4,7 +4,7 @@ describe('home', () => {
   })
 
   it('should have the hero content', () => {
-    cy.getByText(/frontend developer/i)
+    cy.getAllByText(/frontend developer/i)
       .getByText(/Hey, I'm Arya./i)
       .getByText(/Twitter/i)
   })
