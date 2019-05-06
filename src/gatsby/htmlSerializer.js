@@ -19,6 +19,20 @@ const codeInline = ['text']
 // Labels with these names will become code blocks
 const codeBlock = ['javascript', 'css', 'scss', 'jsx', 'bash', 'json', 'diff', 'markdown', 'graphql']
 
+const linkResolver = linkElement => {
+  switch (linkElement.type) {
+    case 'post': {
+      return `/${linkElement.uid}`
+    }
+    // Add cases here for any types here you've created in prismic here
+    // Especially those those that live under a parent slug:
+    // For example: `/${BLOG_SLUG}/${linkElement.uid}`
+    default: {
+      return null
+    }
+  }
+}
+
 const htmlSerializer = (type, element, content) => {
   switch (type) {
     // First differentiate between a label and a preformatted field (e.g. the Code Block slice)
@@ -48,6 +62,17 @@ const htmlSerializer = (type, element, content) => {
         )}</code></pre>`
       }
       return null
+    }
+    case Elements.hyperlink: {
+      const targetAttr = element.data.target ? element.data.target : null
+      // If the hyperlink has target="_blank" we add rel="noopener noreferrer"
+      // See https://developers.google.com/web/tools/lighthouse/audits/noopener
+      const relAttr = element.data.target ? 'noopener noreferrer' : null
+      const hrefAttr = element.data.url || linkResolver(element.data)
+      const attributes = `${targetAttr ? `target=${targetAttr}` : ''}
+                          ${relAttr ? ` rel=${relAttr}` : ''}
+                          ${hrefAttr ? ` href=${hrefAttr}` : ''}`
+      return `<a ${attributes}>${content}</a>`
     }
     default: {
       return null
