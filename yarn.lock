@@ -9809,13 +9809,14 @@ prismic-javascript@^1.1.5:
     cross-fetch "^2.2.0"
     promise-polyfill "8.0.0"
 
-prismic-reactjs@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/prismic-reactjs/-/prismic-reactjs-0.3.2.tgz#deebb1a14772e3194c097ddc540e02afa01ac789"
-  integrity sha512-4nPNWGuYdwVd++Xbe9h0mqauDh55IpprI8BBAj3M24UkgqVZScylMireNvyr3O7qV3uPx/LW0Eba8YYMsJltUw==
+prismic-reactjs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prismic-reactjs/-/prismic-reactjs-1.0.0.tgz#e494d307fe52f317e5267141e6eebfabfc49f77c"
+  integrity sha512-PjMN8tyNYi/J72oytZLvTShDN6NN959f4UveBbBSNwxk45gVRJcp5XSEd/OHT7EtC3Qhwi63Quk+6bRXohpDHQ==
   dependencies:
     prismic-helpers "^1.0.0"
-    prismic-richtext "^0.4.2"
+    prismic-richtext "^1.0.1"
+    prop-types "^15.7.2"
 
 prismic-richtext@^0.4.2:
   version "0.4.2"
@@ -9824,6 +9825,14 @@ prismic-richtext@^0.4.2:
   dependencies:
     ramda "^0.25.0"
     uuid "^3.1.0"
+
+prismic-richtext@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/prismic-richtext/-/prismic-richtext-1.0.1.tgz#896aaa589d2d6e33762d7fe8499c21952f27dc52"
+  integrity sha512-OfRpB2lXhJNv9YAcRnyR+IqY4v2C7HxtChE6ErdlwgfhexaKqdfY6Ti4Oyr2WHFbcnjy+BI0Mf2cWQvClvjOmA==
+  dependencies:
+    ramda "^0.26.1"
+    uuid "^3.3.2"
 
 prismjs@^1.16.0:
   version "1.16.0"
@@ -10046,6 +10055,11 @@ ramda@^0.25.0:
   version "0.25.0"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
   integrity sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+
+ramda@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
+  integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
 randomatic@^3.0.0:
   version "3.1.1"
