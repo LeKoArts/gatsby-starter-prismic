@@ -30,7 +30,7 @@ const CatWrapper = Wrapper.withComponent('main')
 const Category = ({
   pageContext: { category },
   data: {
-    posts: { edges, totalCount },
+    posts: { nodes, totalCount },
   },
   location,
 }) => (
@@ -47,7 +47,7 @@ const Category = ({
       <Title style={{ marginTop: '4rem' }}>
         {totalCount} {totalCount === 1 ? 'Post' : 'Posts'} {totalCount === 1 ? 'was' : 'were'} tagged with "{category}"
       </Title>
-      <Listing posts={edges} />
+      <Listing posts={nodes} />
     </CatWrapper>
   </Layout>
 )
@@ -60,7 +60,7 @@ Category.propTypes = {
   }).isRequired,
   data: PropTypes.shape({
     posts: PropTypes.shape({
-      edges: PropTypes.array.isRequired,
+      nodes: PropTypes.array.isRequired,
       totalCount: PropTypes.number.isRequired,
     }).isRequired,
   }).isRequired,
@@ -78,20 +78,18 @@ export const pageQuery = graphql`
       }
     ) {
       totalCount
-      edges {
-        node {
-          uid
-          data {
-            title {
-              text
-            }
-            date(formatString: "DD.MM.YYYY")
-            categories {
-              category {
-                document {
-                  data {
-                    name
-                  }
+      nodes {
+        uid
+        data {
+          title {
+            text
+          }
+          date(formatString: "DD.MM.YYYY")
+          categories {
+            category {
+              document {
+                data {
+                  name
                 }
               }
             }

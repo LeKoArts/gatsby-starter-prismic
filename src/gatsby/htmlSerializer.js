@@ -1,4 +1,4 @@
-const { RichText } = require('prismic-reactjs')
+const { RichText } = require('prismic-dom')
 
 // We don't want to import every PrismJS component - so that's why they're required individually
 const Prism = require('prismjs')

@@ -3,10 +3,9 @@ describe('category', () => {
     cy.visit('/')
       .waitForRouteChange()
       .getByText(/Announcement/i)
-      .click()
+      .click({ force: true })
       .waitForRouteChange()
       .assertRoute('/categories/announcement')
-      .getByText(/Category/i)
   })
   it('should have correct posts on individual overview pages', () => {
     cy.visit('/categories/announcement')

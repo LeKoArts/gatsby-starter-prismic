@@ -3,7 +3,7 @@ describe('post', () => {
     cy.visit('/')
       .waitForRouteChange()
       .getByText(/A Lannister always pays his debt/i)
-      .click()
+      .click({ force: true })
       .waitForRouteChange()
       .assertRoute('/a-lannister-always-pays-his-debt')
   })
@@ -18,7 +18,7 @@ describe('post', () => {
     cy.visit('/a-lannister-always-pays-his-debt').waitForRouteChange()
     cy.get('main').within(() => {
       cy.getByText(/Why you shouldn't visit King's Landing/i)
-        .click()
+        .click({ force: true })
         .waitForRouteChange()
     })
     cy.get('header').within(() => {
@@ -29,7 +29,7 @@ describe('post', () => {
     cy.visit('/a-lannister-always-pays-his-debt').waitForRouteChange()
     cy.get('header').within(() => {
       cy.getByText(/Information/i)
-        .click()
+        .click({ force: true })
         .waitForRouteChange()
     })
     cy.getAllByText(/Category/i)

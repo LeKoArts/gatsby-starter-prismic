@@ -106,9 +106,9 @@ class Index extends Component {
             <h1>{homepage.data.title.text}</h1>
             <HeroText dangerouslySetInnerHTML={{ __html: homepage.data.content.html }} />
             <Social>
-              {social.edges.map((s, index) => (
-                <li data-name={`social-entry-${index}`} key={s.node.primary.label.text}>
-                  <a href={s.node.primary.link.url}>{s.node.primary.label.text}</a>
+              {social.nodes.map((s, index) => (
+                <li data-name={`social-entry-${index}`} key={s.primary.label.text}>
+                  <a href={s.primary.link.url}>{s.primary.label.text}</a>
                 </li>
               ))}
             </Social>
@@ -116,12 +116,12 @@ class Index extends Component {
         </Hero>
         <IndexWrapper id={website.skipNavId} style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
           <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
-          <Listing posts={posts.edges} />
+          <Listing posts={posts.nodes} />
           <Title style={{ marginTop: '8rem' }}>Recent projects</Title>
           <ProjectListing>
-            {projects.edges.map(project => (
-              <li key={project.node.primary.label.text}>
-                <a href={project.node.primary.link.url}>{project.node.primary.label.text}</a>
+            {projects.nodes.map(project => (
+              <li key={project.primary.label.text}>
+                <a href={project.primary.link.url}>{project.primary.label.text}</a>
               </li>
             ))}
           </ProjectListing>
@@ -135,7 +135,25 @@ export default Index
 
 Index.propTypes = {
   data: PropTypes.shape({
-    posts: PropTypes.object.isRequired,
+    homepage: PropTypes.shape({
+      data: PropTypes.shape({
+        title: PropTypes.shape({
+          text: PropTypes.string.isRequired,
+        }),
+        content: PropTypes.shape({
+          html: PropTypes.string.isRequired,
+        }),
+      }),
+    }),
+    social: PropTypes.shape({
+      nodes: PropTypes.array.isRequired,
+    }),
+    posts: PropTypes.shape({
+      nodes: PropTypes.array.isRequired,
+    }),
+    projects: PropTypes.shape({
+      nodes: PropTypes.array.isRequired,
+    }),
   }).isRequired,
 }
 
@@ -152,34 +170,30 @@ export const pageQuery = graphql`
       }
     }
     social: allPrismicHeroLinksBodyLinkItem {
-      edges {
-        node {
-          primary {
-            label {
-              text
-            }
-            link {
-              url
-            }
+      nodes {
+        primary {
+          label {
+            text
+          }
+          link {
+            url
           }
         }
       }
     }
     posts: allPrismicPost(sort: { fields: [data___date], order: DESC }) {
-      edges {
-        node {
-          uid
-          data {
-            title {
-              text
-            }
-            date(formatString: "DD.MM.YYYY")
-            categories {
-              category {
-                document {
-                  data {
-                    name
-                  }
+      nodes {
+        uid
+        data {
+          title {
+            text
+          }
+          date(formatString: "DD.MM.YYYY")
+          categories {
+            category {
+              document {
+                data {
+                  name
                 }
               }
             }
@@ -188,15 +202,13 @@ export const pageQuery = graphql`
       }
     }
     projects: allPrismicProjectsBodyLinkItem {
-      edges {
-        node {
-          primary {
-            label {
-              text
-            }
-            link {
-              url
-            }
+      nodes {
+        primary {
+          label {
+            text
+          }
+          link {
+            url
           }
         }
       }

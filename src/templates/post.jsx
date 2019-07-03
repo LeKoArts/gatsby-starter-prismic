@@ -52,7 +52,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
       <PostWrapper id={website.skipNavId}>
         <SliceZone allSlices={data.body} />
         <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
-        <Listing posts={posts.edges} />
+        <Listing posts={posts.nodes} />
       </PostWrapper>
     </Layout>
   )
@@ -63,6 +63,9 @@ export default Post
 Post.propTypes = {
   data: PropTypes.shape({
     prismicPost: PropTypes.object.isRequired,
+    posts: PropTypes.shape({
+      nodes: PropTypes.array.isRequired,
+    }),
   }).isRequired,
   location: PropTypes.object.isRequired,
 }
@@ -139,20 +142,18 @@ export const pageQuery = graphql`
       }
     }
     posts: allPrismicPost(limit: 2, sort: { fields: [data___date], order: DESC }, filter: { uid: { ne: $uid } }) {
-      edges {
-        node {
-          uid
-          data {
-            title {
-              text
-            }
-            date(formatString: "DD.MM.YYYY")
-            categories {
-              category {
-                document {
-                  data {
-                    name
-                  }
+      nodes {
+        uid
+        data {
+          title {
+            text
+          }
+          date(formatString: "DD.MM.YYYY")
+          categories {
+            category {
+              document {
+                data {
+                  name
                 }
               }
             }
