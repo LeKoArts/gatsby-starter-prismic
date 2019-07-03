@@ -3,7 +3,7 @@ executors:
     parameters:
       image:
         type: string
-        default: "10"
+        default: "lts"
     docker:
     - image: circleci/node:<< parameters.image >>
       environment:
@@ -25,7 +25,7 @@ aliases:
   install_node_modules: &install_node_modules
     run:
       name: Install Yarn Packages
-      command: yarn install --frozen-lockfile
+      command: yarn install --frozen-lockfile --ignore-engines
 
   save_cache: &save_cache
     save_cache:
