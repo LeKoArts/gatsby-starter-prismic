@@ -52,7 +52,7 @@
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "typeface-lora": "^0.0.72",
-    "typeface-source-sans-pro": "^0.0.54",
+    "typeface-source-sans-pro": "^0.0.75",
     "typography": "^0.16.19"
   },
   "devDependencies": {
