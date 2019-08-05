@@ -59,7 +59,7 @@
     "@testing-library/cypress": "^4.0.5",
     "babel-eslint": "^10.0.2",
     "cross-env": "^5.2.0",
-    "cypress": "^3.4.0",
+    "cypress": "^3.4.1",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
