@@ -115,7 +115,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
       dateModified: node.last_publication_date,
       description: seo.description,
       headline: seo.title,
-      inLanguage: 'en',
+      inLanguage: siteLanguage,
       url: seo.url,
       name: seo.title,
       image: {
