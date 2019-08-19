@@ -22,7 +22,7 @@
     "test:e2e:ci": "cross-env CYPRESS_SUPPORT=y start-server-and-test develop http://localhost:8000 cy:run:ci"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.15",
+    "@emotion/core": "^10.0.16",
     "@emotion/styled": "^10.0.15",
     "@emotion/styled-base": "^10.0.15",
     "@reach/skip-nav": "^0.1.3",
