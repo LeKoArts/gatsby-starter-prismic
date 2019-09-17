@@ -1558,14 +1558,14 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
-"@testing-library/cypress@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-4.2.0.tgz#788ed4ccb3ad2f70fbe4758f07995cd1cdd58ba7"
-  integrity sha512-IFM/iuVBUi0ciw5rx6zzX//DtFUrPumZJIDjMRe1MzsoakdvLfMdPtt2DuvEt3iJHmH0LQM1vZCIoQDUe99yhQ==
+"@testing-library/cypress@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-5.0.1.tgz#ca65d6c610e4173621380dc40c94cf849dd4c9c4"
+  integrity sha512-OuQRO4F1hrR/hQYUacFNFOIF//Xs4j3ufwZZ5vGokGSY7jMFlh08iwJoyLwIvutvWrnFqCZLZ02j8VKWtWkIvw==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@testing-library/dom" "^6.0.0"
-    "@types/testing-library__cypress" "^4.1.0"
+    "@types/testing-library__cypress" "^5.0.0"
 
 "@testing-library/dom@^6.0.0":
   version "6.0.0"
@@ -1714,10 +1714,10 @@
   resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.2.tgz#a811b8c18e2babab7d542b3365887ae2e4d9de47"
   integrity sha512-7EJYyKTL7tFR8+gDbB6Wwz/arpGa0Mywk1TJbNzKzHtzbwVmY4HR9WqS5VV7dsBUKQmPNr192jHr/VpBluj/hg==
 
-"@types/testing-library__cypress@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@types/testing-library__cypress/-/testing-library__cypress-4.1.0.tgz#4e521b3531170dc91342bfe560fd4bbfae12898b"
-  integrity sha512-SUNZmsgkKp7zjzzOfysAgJph4zHVU2P9DExGMIX1sksMcGgUOiLJ11Z5M+jHumHrx48lVpo+WDXIq8vSlFlSzw==
+"@types/testing-library__cypress@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/testing-library__cypress/-/testing-library__cypress-5.0.0.tgz#23586b6183a504c59fbd716ba2bd2d5a909528e6"
+  integrity sha512-0tpxkL+9nJTtSCbdGYA6/rB3/2dRvH7QrFsR1sjuLlK5iU9BVSbjaiy1h0nhnh314U9rtvp8h2Vxz2Vh717+6w==
   dependencies:
     "@types/jquery" "*"
     "@types/testing-library__dom" "*"
