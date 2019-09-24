@@ -32,6 +32,6 @@ describe('post', () => {
         .click({ force: true })
         .waitForRouteChange()
     })
-    cy.getAllByText(/Category/i)
+    cy.findAllByText(/Category/i)
   })
 })
