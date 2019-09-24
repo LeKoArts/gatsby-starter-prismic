@@ -5,19 +5,19 @@ describe('home', () => {
 
   it('should have the hero content', () => {
     cy.getAllByText(/frontend developer/i)
-      .getByText(/Hey, I'm Arya./i)
-      .getByText(/Twitter/i)
+      .findByText(/Hey, I'm Arya./i)
+      .findByText(/Twitter/i)
   })
 
   it('should have recent posts', () => {
-    cy.getByText(/A Lannister always pays his debt/i)
+    cy.findByText(/A Lannister always pays his debt/i)
   })
 
   it('should have recent projects', () => {
-    cy.getByText(/Production of a keyboard/i)
+    cy.findByText(/Production of a keyboard/i)
   })
 
   it('should have a footer', () => {
-    cy.getByText(/Valar Morghulis/i)
+    cy.findByText(/Valar Morghulis/i)
   })
 })
