@@ -5551,12 +5551,12 @@ execa@0.10.0, execa@^0.10.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execa@2.0.5, execa@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/execa/-/execa-2.0.5.tgz#5be3e2ea7e61bd038da5a0e11dc6ab2097357f2f"
-  integrity sha512-SwmwZZyJjflcqLSgllk4EQlMLst2p9muyzwNugKGFlpAz6rZ7M+s2nBR97GAq4Vzjwx2y9rcMcmqzojwN+xwNA==
+execa@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-2.1.0.tgz#e5d3ecd837d2a60ec50f3da78fd39767747bbe99"
+  integrity sha512-Y/URAVapfbYy2Xp/gb6A0E7iR8xeqOCXsuuaoMn7A5PzrXUK84E1gyiEfq0wQd/GHA6GsoHWwhNq8anb0mleIw==
   dependencies:
-    cross-spawn "^6.0.5"
+    cross-spawn "^7.0.0"
     get-stream "^5.0.0"
     is-stream "^2.0.0"
     merge-stream "^2.0.0"
@@ -5591,6 +5591,21 @@ execa@^1.0.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
+
+execa@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-2.0.5.tgz#5be3e2ea7e61bd038da5a0e11dc6ab2097357f2f"
+  integrity sha512-SwmwZZyJjflcqLSgllk4EQlMLst2p9muyzwNugKGFlpAz6rZ7M+s2nBR97GAq4Vzjwx2y9rcMcmqzojwN+xwNA==
+  dependencies:
+    cross-spawn "^6.0.5"
+    get-stream "^5.0.0"
+    is-stream "^2.0.0"
+    merge-stream "^2.0.0"
+    npm-run-path "^3.0.0"
+    onetime "^5.1.0"
+    p-finally "^2.0.0"
+    signal-exit "^3.0.2"
+    strip-final-newline "^2.0.0"
 
 executable@4.1.1, executable@^4.1.0:
   version "4.1.1"
@@ -11449,15 +11464,6 @@ react@^16.10.2:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
 
-react@^16.10.2:
-  version "16.10.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.10.2.tgz#a5ede5cdd5c536f745173c8da47bda64797a4cf0"
-  integrity sha512-MFVIq0DpIhrHFyqLU0S3+4dIcBhhOvBE8bJ/5kHPVOVaGdo0KuiQzpcjCPsf585WvhypqtrMILyoE2th6dT+Lw==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-
 read-chunk@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/read-chunk/-/read-chunk-3.0.0.tgz#086cd198406104355626afacd2d21084afc367ec"
@@ -12623,15 +12629,15 @@ stackframe@^1.0.4:
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.0.4.tgz#357b24a992f9427cba6b545d96a14ed2cbca187b"
   integrity sha512-to7oADIniaYwS3MhtCa/sQhrxidCCQiF/qp4/m5iN3ipf0Y7Xlri0f6eG29r08aL7JYl8n32AF3Q5GYBZ7K8vw==
 
-start-server-and-test@^1.10.4:
-  version "1.10.4"
-  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.10.4.tgz#f6cc79e129bd578f6745037d5b5207584f5592c1"
-  integrity sha512-Oi1YzmHzDSRMA4cwVrewZbVYoAcWeXdB73H5kutQex3cVhS8Thlwj8d4lXTp7hq1nXarIC91kCNMI17/78u/sQ==
+start-server-and-test@^1.10.5:
+  version "1.10.5"
+  resolved "https://registry.yarnpkg.com/start-server-and-test/-/start-server-and-test-1.10.5.tgz#6078d665a93372e74d5e7e5ece87634c81926077"
+  integrity sha512-3cErmnxyzLaMy460btq0ohGDJcq8G7o16Ijnmgw5Tu59aTa2pkfGR5I8M6p584kDFTxmGvV1OsmV3eWMFC6Obw==
   dependencies:
     bluebird "3.7.0"
     check-more-types "2.24.0"
     debug "4.1.1"
-    execa "2.0.5"
+    execa "2.1.0"
     lazy-ass "1.6.0"
     ps-tree "1.2.0"
     wait-on "3.3.0"
