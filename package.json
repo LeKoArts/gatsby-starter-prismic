@@ -71,7 +71,7 @@
     "eslint-plugin-react-hooks": "^2.1.2",
     "gatsby-cypress": "^0.2.13",
     "prettier": "^1.18.2",
-    "start-server-and-test": "^1.10.5"
+    "start-server-and-test": "^1.10.6"
   },
   "keywords": [
     "gatsby",
