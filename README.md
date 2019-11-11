@@ -130,7 +130,7 @@ Follow the second and third step (with the respective file from `.prismic`) for 
 | Category   | category   | Repeatable |
 | Hero Links | hero_links | Single     |
 | Homepage   | homepage   | Single     |
-| Projects   | projects   | Single     |
+| Projects   | projects   | Repeatable |
 
 These are the exact same custom types I used for this starter.
 
