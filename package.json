@@ -25,7 +25,7 @@
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "@emotion/styled-base": "^10.0.27",
-    "@reach/skip-nav": "^0.7.4",
+    "@reach/skip-nav": "^0.8.0",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",
     "emotion-theming": "^10.0.27",

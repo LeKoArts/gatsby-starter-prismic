@@ -1496,17 +1496,17 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/skip-nav@^0.7.4":
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/@reach/skip-nav/-/skip-nav-0.7.4.tgz#7b5c263a64d43330e9e4560da23340ea9e71918c"
-  integrity sha512-/3aQ3V9G4MtQjm7AFN09wVs0rivWR49ntNRC6waQviBd2HlRXbDlbNGsQ8zl0M5R7VHYuBQERwGuG4P0hJ53iQ==
+"@reach/skip-nav@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@reach/skip-nav/-/skip-nav-0.8.0.tgz#2ceba810569ea55c65c058f899afeffe18d5ab3e"
+  integrity sha512-ucff4rMrUL9aoXhooqI6IYZvTD8JQw2DbAUCkGnwrsYbY1W/jJtyBzCLU3DrzuF2thtqsik7cc+hWaAoeAh8TQ==
   dependencies:
-    "@reach/utils" "^0.7.4"
+    "@reach/utils" "^0.8.0"
 
-"@reach/utils@^0.7.4":
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.7.4.tgz#cdd0cff8c57445ce9c2b11204e6a62868f1093a1"
-  integrity sha512-RFhWmeaEfcu+xATfGPH4yjTlgD01ek0D8bVhtP4CgCqV2gnyS0KLAlWshzlAlSrBvr7zmpkA5QZJ1g43vFBSww==
+"@reach/utils@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.8.0.tgz#8610590a42bf713d5686e357271609c713bb5c24"
+  integrity sha512-NjOjrFdf7VS6zyTAyXzYgRwLfluECrWe7XLb5Nh9HQA81+9lkvzkR5U9TP07lDDBCup/rFIF56S1XNB/StRrfA==
 
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.2"
