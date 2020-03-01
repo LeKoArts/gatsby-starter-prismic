@@ -13654,10 +13654,10 @@ typeface-lora@^0.0.72:
   resolved "https://registry.yarnpkg.com/typeface-lora/-/typeface-lora-0.0.72.tgz#850c211ef51167d8b71b610c93a9b1ca0f17863c"
   integrity sha512-6Q029hpZAJOU2K0V3JM0xColUa/u/0xpzgN5nv1aKe019lNYp9u+6u+BF3zK7n+gwGAjrz75qdFxhM34fheSAA==
 
-typeface-source-sans-pro@^0.0.75:
-  version "0.0.75"
-  resolved "https://registry.yarnpkg.com/typeface-source-sans-pro/-/typeface-source-sans-pro-0.0.75.tgz#33e60ea079738c2dbdb2d0aa28f899f565e1646e"
-  integrity sha512-8aI6ywe+5py1MoMQjdnuQKepOATSLpFoyatVMweF6JNUD8cu+sWaVEfZBN08CRxPrSC4KYTArf6prrQzcqpyQA==
+typeface-source-sans-pro@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/typeface-source-sans-pro/-/typeface-source-sans-pro-1.1.5.tgz#5b6a009f79888e9d4053d617772805fe79a941cc"
+  integrity sha512-a+KZN2X7gzZ91RUKB/9zAiEtRuD+aX7dwNTo121vpZz2MVODWSJfw81XZQmIwZ4jD/5658EMvPJHttS6qT0gZA==
 
 typography-normalize@^0.16.19:
   version "0.16.19"
