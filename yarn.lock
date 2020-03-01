@@ -1000,10 +1000,10 @@
     "@emotion/utils" "0.11.3"
     "@emotion/weak-memoize" "0.2.5"
 
-"@emotion/core@^10.0.27":
-  version "10.0.27"
-  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.27.tgz#7c3f78be681ab2273f3bf11ca3e2edc4a9dd1fdc"
-  integrity sha512-XbD5R36pVbohQMnKfajHv43g8EbN4NHdF6Zh9zg/C0nr0jqwOw3gYnC07Xj3yG43OYSRyrGsoQ5qPwc8ycvLZw==
+"@emotion/core@^10.0.28":
+  version "10.0.28"
+  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.28.tgz#bb65af7262a234593a9e952c041d0f1c9b9bef3d"
+  integrity sha512-pH8UueKYO5jgg0Iq+AmCLxBsvuGtvlmiDCOuv8fGNYn3cowFpLN98L8zO56U0H1PjDIyAlXymgL3Wu7u7v6hbA==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/cache" "^10.0.27"
@@ -1035,6 +1035,13 @@
   version "0.8.6"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.6.tgz#4757646f0a58e9dec614c47c838e7147d88c263c"
   integrity sha512-mnZMho3Sq8BfzkYYRVc8ilQTnc8U02Ytp6J1AwM6taQStZ3AhsEJBX2LzhA/LJirNCwM2VtHL3VFIZ+sNJUgUQ==
+  dependencies:
+    "@emotion/memoize" "0.7.4"
+
+"@emotion/is-prop-valid@0.8.7":
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.7.tgz#803449993f436f9a6c67752251ea3fc492a1044c"
+  integrity sha512-OPkKzUeiid0vEKjZqnGcy2mzxjIlCffin+L2C02pdz/bVlt5zZZE2VzO0D3XOPnH0NEeF21QNKSXiZphjr4xiQ==
   dependencies:
     "@emotion/memoize" "0.7.4"
 
@@ -1082,6 +1089,16 @@
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@emotion/is-prop-valid" "0.8.6"
+    "@emotion/serialize" "^0.11.15"
+    "@emotion/utils" "0.11.3"
+
+"@emotion/styled-base@^10.0.28":
+  version "10.0.28"
+  resolved "https://registry.yarnpkg.com/@emotion/styled-base/-/styled-base-10.0.28.tgz#81e8ae3c9929bfc8d9eb0ce75a28704c98ad01b5"
+  integrity sha512-bLYVsPlFZ3SIR9YQsuFiJ9mML76ZLnsAfbkwBFbdMTCJ/0I+xgv+SG/QYHiLvGUUohjNVPeneYUyTUkcKndWxg==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    "@emotion/is-prop-valid" "0.8.7"
     "@emotion/serialize" "^0.11.15"
     "@emotion/utils" "0.11.3"
 
