@@ -70,7 +70,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "gatsby-cypress": "^0.2.24",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.5",
     "start-server-and-test": "^1.10.11"
   },
   "keywords": [
