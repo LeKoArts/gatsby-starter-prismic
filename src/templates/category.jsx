@@ -6,18 +6,18 @@ import { Layout, Listing, Wrapper, Title, SEO, Header } from '../components'
 import website from '../../config/website'
 
 const Hero = styled.header`
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.primary};
   padding-top: 1rem;
   padding-bottom: 4rem;
   h1 {
-    color: ${props => props.theme.colors.bg};
+    color: ${(props) => props.theme.colors.bg};
   }
 `
 
 const Headline = styled.p`
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  color: ${props => props.theme.colors.greyBlue};
+  color: ${(props) => props.theme.colors.greyBlue};
   font-size: 1.25rem;
   a {
     font-style: normal;

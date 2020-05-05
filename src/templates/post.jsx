@@ -7,7 +7,7 @@ import Categories from '../components/Listing/Categories'
 import website from '../../config/website'
 
 const Hero = styled.header`
-  background-color: ${props => props.theme.colors.greyLight};
+  background-color: ${(props) => props.theme.colors.greyLight};
   padding-top: 1rem;
   padding-bottom: 4rem;
 `
@@ -15,7 +15,7 @@ const Hero = styled.header`
 const Headline = styled.p`
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  color: ${props => props.theme.colors.grey};
+  color: ${(props) => props.theme.colors.grey};
   font-size: 1.25rem;
   a {
     font-style: normal;
@@ -29,7 +29,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
   const { data } = prismicPost
   let categories = false
   if (data.categories[0].category) {
-    categories = data.categories.map(c => c.category.document[0].data.name)
+    categories = data.categories.map((c) => c.category.document[0].data.name)
   }
   return (
     <Layout customSEO>

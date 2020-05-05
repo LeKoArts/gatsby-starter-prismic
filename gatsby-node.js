@@ -1,8 +1,8 @@
 const _ = require('lodash')
 
 // graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
-const wrapper = promise =>
-  promise.then(result => {
+const wrapper = (promise) =>
+  promise.then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -45,9 +45,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const postsList = result.data.allPrismicPost.edges
 
   // Double check that the post has a category assigned
-  postsList.forEach(edge => {
+  postsList.forEach((edge) => {
     if (edge.node.data.categories[0].category) {
-      edge.node.data.categories.forEach(cat => {
+      edge.node.data.categories.forEach((cat) => {
         categorySet.add(cat.category.document[0].data.name)
       })
     }
@@ -65,7 +65,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const categoryList = Array.from(categorySet)
 
-  categoryList.forEach(category => {
+  categoryList.forEach((category) => {
     createPage({
       path: `/categories/${_.kebabCase(category)}`,
       component: categoryTemplate,

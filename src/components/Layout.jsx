@@ -100,7 +100,7 @@ class Layout extends Component {
             }
           }
         `}
-        render={data => (
+        render={(data) => (
           <PureLayout {...this.props} data={data}>
             {this.props.children}
           </PureLayout>

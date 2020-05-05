@@ -22,7 +22,7 @@ const Content = styled.div`
   blockquote {
     margin-left: 0;
     padding-left: 1.45rem;
-    border-left: 2px solid ${props => props.theme.colors.primary};
+    border-left: 2px solid ${(props) => props.theme.colors.primary};
     p {
       font-size: 19px;
       font-style: italic;
@@ -33,7 +33,7 @@ const Content = styled.div`
 export default class SliceZone extends Component {
   render() {
     const { allSlices } = this.props
-    const slice = allSlices.map(s => {
+    const slice = allSlices.map((s) => {
       switch (s.slice_type) {
         // These are the API IDs of the slices
         case 'text':

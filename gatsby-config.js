@@ -35,7 +35,7 @@ module.exports = {
         repositoryName: 'gatsby-starter-prismic',
         accessToken: `${process.env.API_KEY}`,
         // Get the correct URLs in blog posts
-        linkResolver: () => post => `/${post.uid}`,
+        linkResolver: () => (post) => `/${post.uid}`,
         // PrismJS highlighting for labels and slices
         htmlSerializer: () => prismicHtmlSerializer,
         // Remove this config option if you only have one language in your Prismic repository
