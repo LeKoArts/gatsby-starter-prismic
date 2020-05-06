@@ -1,8 +1,7 @@
 describe('post', () => {
   it('should be clickable on home', () => {
-    cy.visit('/')
-      .waitForRouteChange()
-      .findByText(/A Lannister always pays his debt/i)
+    cy.visit('/').waitForRouteChange()
+    cy.findByText(/A Lannister always pays his debt/i)
       .click({ force: true })
       .waitForRouteChange()
       .assertRoute('/a-lannister-always-pays-his-debt')
@@ -10,7 +9,8 @@ describe('post', () => {
   it('should have its content', () => {
     cy.visit('/a-lannister-always-pays-his-debt').waitForRouteChange()
     cy.get('header').within(() => {
-      cy.findByText(/A Lannister always pays his debt/i).findByText(/11.10.2018/i)
+      cy.findByText(/A Lannister always pays his debt/i)
+      cy.findByText(/11.10.2018/i)
     })
     cy.findByText(/Hello, this is a new line on this blogpost./i)
   })
